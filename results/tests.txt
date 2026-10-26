@@ -1,0 +1,20 @@
+test_classification_ignores_ids_and_evaluation_labels (test_project.CommandLineTests.test_classification_ignores_ids_and_evaluation_labels) ... ok
+test_clustering_without_a_test_file_returns_one_label_per_row (test_project.CommandLineTests.test_clustering_without_a_test_file_returns_one_label_per_row) ... ok
+test_duplicate_csv_headers_are_rejected (test_project.CommandLineTests.test_duplicate_csv_headers_are_rejected) ... ok
+test_missing_test_feature_is_rejected (test_project.CommandLineTests.test_missing_test_feature_is_rejected) ... ok
+test_regression_outputs_numbers_in_prediction_order (test_project.CommandLineTests.test_regression_outputs_numbers_in_prediction_order) ... ok
+test_clustering_uses_the_requested_number_of_groups (test_project.ModelTests.test_clustering_uses_the_requested_number_of_groups) ... ok
+test_constant_regression_target_is_finite (test_project.ModelTests.test_constant_regression_target_is_finite) ... ok
+test_exhausted_budget_still_returns_valid_predictions (test_project.ModelTests.test_exhausted_budget_still_returns_valid_predictions) ... ok
+test_one_class_and_a_rare_class_do_not_break_validation (test_project.ModelTests.test_one_class_and_a_rare_class_do_not_break_validation) ... ok
+test_training_deadline_returns_a_completed_output (test_project.ModelTests.test_training_deadline_returns_a_completed_output) ... ok
+test_all_missing_and_constant_columns_still_give_usable_input (test_project.PreprocessingTests.test_all_missing_and_constant_columns_still_give_usable_input) ... ok
+test_declared_types_override_storage_types (test_project.PreprocessingTests.test_declared_types_override_storage_types) ... ok
+test_missing_feature_is_reported_instead_of_silently_filled (test_project.PreprocessingTests.test_missing_feature_is_reported_instead_of_silently_filled) ... ok
+test_prediction_rows_do_not_change_training_statistics (test_project.PreprocessingTests.test_prediction_rows_do_not_change_training_statistics) ... ok
+test_profile_keeps_raw_data_problems_visible (test_project.ProfileTests.test_profile_keeps_raw_data_problems_visible) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 64.241s
+
+OK

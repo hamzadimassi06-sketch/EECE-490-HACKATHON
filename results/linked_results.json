@@ -1,0 +1,175 @@
+[
+  {
+    "dataset": "telco",
+    "task": "classification",
+    "source_filename": "WA_Fn-UseC_-Telco-Customer-Churn.csv",
+    "source_url": "https://www.kaggle.com/datasets/blastchar/telco-customer-churn",
+    "source_sha256": "88be4b93fbe0cc83421af1c503794c97c342eca914c1576db7c276e61d61358a",
+    "source_rows": 7043,
+    "training_rows": 5634,
+    "prediction_rows": 1409,
+    "seed": 42,
+    "time_limit_seconds": 50.0,
+    "wall_seconds": 4.943,
+    "reported_seconds": 4.7485,
+    "selected_model": "logistic_regression",
+    "model_deadline_reached": false,
+    "emergency_fallback": false,
+    "removed_columns": [],
+    "excluded_id_columns": [
+      "customerID"
+    ],
+    "accuracy": 0.7381121362668559,
+    "balanced_accuracy": 0.7525807951639154,
+    "positive_precision": 0.504302925989673,
+    "positive_recall": 0.7834224598930482,
+    "positive_f1": 0.6136125654450262,
+    "confusion_matrix": [
+      [
+        747,
+        288
+      ],
+      [
+        81,
+        293
+      ]
+    ],
+    "target": "Churn",
+    "evaluation": "stratified 80/20 holdout",
+    "positive_label": "Yes",
+    "confusion_matrix_labels": [
+      "No",
+      "Yes"
+    ],
+    "confusion_matrix_orientation": "rows actual, columns predicted",
+    "positive_training_rows": 1495,
+    "positive_holdout_rows": 374,
+    "majority_baseline": {
+      "accuracy": 0.7345635202271115,
+      "balanced_accuracy": 0.5,
+      "positive_precision": 0.0,
+      "positive_recall": 0.0,
+      "positive_f1": 0.0,
+      "confusion_matrix": [
+        [
+          1035,
+          0
+        ],
+        [
+          374,
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "dataset": "ai4i",
+    "task": "classification",
+    "source_filename": "ai4i2020.csv",
+    "source_url": "https://www.kaggle.com/datasets/stephanmatzka/predictive-maintenance-dataset-ai4i-2020",
+    "source_sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e",
+    "source_rows": 10000,
+    "training_rows": 8000,
+    "prediction_rows": 2000,
+    "seed": 42,
+    "time_limit_seconds": 50.0,
+    "wall_seconds": 3.8287,
+    "reported_seconds": 3.6218,
+    "selected_model": "hist_gradient_boosting",
+    "model_deadline_reached": false,
+    "emergency_fallback": false,
+    "removed_columns": [
+      "TWF",
+      "HDF",
+      "PWF",
+      "OSF",
+      "RNF"
+    ],
+    "excluded_id_columns": [
+      "UDI",
+      "Product ID"
+    ],
+    "accuracy": 0.9815,
+    "balanced_accuracy": 0.8911064425770308,
+    "positive_precision": 0.7012987012987013,
+    "positive_recall": 0.7941176470588235,
+    "positive_f1": 0.7448275862068966,
+    "confusion_matrix": [
+      [
+        1909,
+        23
+      ],
+      [
+        14,
+        54
+      ]
+    ],
+    "target": "Machine failure",
+    "evaluation": "stratified 80/20 holdout",
+    "positive_label": 1,
+    "confusion_matrix_labels": [
+      0,
+      1
+    ],
+    "confusion_matrix_orientation": "rows actual, columns predicted",
+    "positive_training_rows": 271,
+    "positive_holdout_rows": 68,
+    "majority_baseline": {
+      "accuracy": 0.966,
+      "balanced_accuracy": 0.5,
+      "positive_precision": 0.0,
+      "positive_recall": 0.0,
+      "positive_f1": 0.0,
+      "confusion_matrix": [
+        [
+          1932,
+          0
+        ],
+        [
+          68,
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "dataset": "mall",
+    "task": "clustering",
+    "source_filename": "Mall_Customers.csv",
+    "source_url": "https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python",
+    "source_sha256": "416a4f62a8f33841a16e1db5297f0e05d3b65b05e73632cedae58e739e1e1f77",
+    "source_rows": 200,
+    "training_rows": 200,
+    "prediction_rows": 200,
+    "seed": 42,
+    "time_limit_seconds": 50.0,
+    "wall_seconds": 2.3088,
+    "reported_seconds": 2.0982,
+    "selected_model": "kmeans",
+    "model_deadline_reached": false,
+    "emergency_fallback": false,
+    "removed_columns": [
+      "CustomerID",
+      "Gender",
+      "Age"
+    ],
+    "excluded_id_columns": [],
+    "evaluation": "internal silhouette; no ground-truth cluster labels",
+    "features_used": [
+      "Annual Income (k$)",
+      "Spending Score (1-100)"
+    ],
+    "requested_clusters": 5,
+    "cluster_count_note": "Our example choice; the brief does not give Mall k.",
+    "groups_found": 5,
+    "group_counts": {
+      "0": 81,
+      "1": 39,
+      "2": 22,
+      "3": 35,
+      "4": 23
+    },
+    "silhouette": 0.5546571631111091,
+    "silhouette_space": "income and spending, each standardized with StandardScaler"
+  }
+]

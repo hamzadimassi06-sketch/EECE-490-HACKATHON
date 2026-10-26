@@ -1,0 +1,9 @@
+{
+  "task": "clustering",
+  "n_clusters": 3,
+  "feature_types": {
+    "x": "numeric",
+    "y": "numeric",
+    "z": "numeric"
+  }
+}

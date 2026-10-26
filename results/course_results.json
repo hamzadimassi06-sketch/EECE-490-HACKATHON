@@ -1,0 +1,57 @@
+[
+  {
+    "dataset": "iris_classification",
+    "task": "classification",
+    "training_rows": 120,
+    "prediction_rows": 30,
+    "wall_seconds": 10.9094,
+    "reported_seconds": 10.1806,
+    "selected_model": "logistic_regression",
+    "model_deadline_reached": false,
+    "accuracy": 0.9333333333333333,
+    "balanced_accuracy": 0.9333333333333332,
+    "baseline_accuracy": 0.3333333333333333,
+    "baseline_balanced_accuracy": 0.3333333333333333
+  },
+  {
+    "dataset": "body_performance",
+    "task": "classification",
+    "training_rows": 10714,
+    "prediction_rows": 2679,
+    "wall_seconds": 24.5597,
+    "reported_seconds": 23.9322,
+    "selected_model": "hist_gradient_boosting",
+    "model_deadline_reached": false,
+    "accuracy": 0.7562523329600597,
+    "balanced_accuracy": 0.7562021729915446,
+    "baseline_accuracy": 0.25009331840238896,
+    "baseline_balanced_accuracy": 0.25
+  },
+  {
+    "dataset": "life_expectancy",
+    "task": "regression",
+    "training_rows": 2342,
+    "prediction_rows": 586,
+    "wall_seconds": 13.3723,
+    "reported_seconds": 12.6938,
+    "selected_model": "extra_trees",
+    "model_deadline_reached": false,
+    "rmse": 1.6063293294512746,
+    "mae": 0.9284495164960184,
+    "r2": 0.9701698064336943,
+    "baseline_rmse": 9.308237114515464,
+    "dropped_missing_target_rows": 10
+  },
+  {
+    "dataset": "iris_clustering",
+    "task": "clustering",
+    "training_rows": 150,
+    "prediction_rows": 150,
+    "wall_seconds": 7.3476,
+    "reported_seconds": 6.8455,
+    "selected_model": "kmeans",
+    "model_deadline_reached": false,
+    "adjusted_rand_index": 0.6201351808870379,
+    "groups_found": 3
+  }
+]

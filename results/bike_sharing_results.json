@@ -1,0 +1,116 @@
+{
+  "dataset": "bike_sharing",
+  "task": "regression",
+  "source_url": "https://www.kaggle.com/competitions/bike-sharing-demand/data",
+  "source_files": {
+    "train.csv": {
+      "sha256": "0cf70c35eeb6405a40cc9e124854e2da901fa88fe7374a75d141e7401bf4c857"
+    },
+    "test.csv": {
+      "sha256": "3f1d0ebb197ba9b9a79280b30912093ce18959fac6e1931691092cda449eb63e"
+    },
+    "sampleSubmission.csv": {
+      "sha256": "58c27951183b10437d6752cf5bac708ae9f80490d991c24ff76de296f71cb2f2"
+    }
+  },
+  "source_training_rows": 10886,
+  "source_test_rows": 6493,
+  "seed": 42,
+  "time_limit_seconds_per_run": 50.0,
+  "preparation": {
+    "removed_columns": [
+      "datetime",
+      "casual",
+      "registered"
+    ],
+    "calendar_features": [
+      "calendar_hour",
+      "calendar_weekday",
+      "calendar_month",
+      "calendar_year"
+    ],
+    "categorical_codes": [
+      "season",
+      "weather"
+    ],
+    "calendar_encoding": "numeric; Monday=0",
+    "binary_numeric_features": [
+      "holiday",
+      "workingday"
+    ],
+    "note": "Calendar extraction is rowwise; no fitted statistics or target components are used."
+  },
+  "evaluation_note": "Within-month blocked holdout, not future-only forecasting or a leaderboard score.",
+  "outer_training_days": "1-15 of each month",
+  "outer_holdout_days": "16-19 of each month",
+  "internal_validation": "The unchanged core uses a random split of the outer training rows.",
+  "log_error_definition": "RMSLE = RMSE(log1p(actual count), log1p(nonnegative prediction))",
+  "postprocessing_rule": "Clip negative predictions to zero for scoring and export; no rounding.",
+  "sample_submission_usage": "Column names and datetime alignment only; its count values are never read.",
+  "holdout": {
+    "training_rows": 8600,
+    "prediction_rows": 2286,
+    "wall_seconds": 6.7559,
+    "reported_seconds": 6.5202,
+    "selected_model": "hist_gradient_boosting",
+    "model_deadline_reached": false,
+    "emergency_fallback": false,
+    "model_features": 12,
+    "selection_metric": "rmse",
+    "selection_predictions": "raw, before clipping",
+    "target_transform": "none",
+    "rmse": 45.29098263897671,
+    "mae": 27.354691109805653,
+    "r2": 0.9387541963813154,
+    "rmsle": 0.4431278185777892,
+    "negative_predictions_clipped": 34,
+    "raw_minimum_prediction": -26.57099636631663,
+    "raw_maximum_prediction": 911.2244181727888,
+    "minimum_prediction": 0.0,
+    "maximum_prediction": 911.2244181727888,
+    "postprocessing": "clip negative predictions to zero; no integer rounding",
+    "evaluation": "within-month blocked holdout: train days 1-15, score days 16-19",
+    "reported_metrics_use": "nonnegative clipped predictions",
+    "raw_metrics": {
+      "rmse": 45.32469641765973,
+      "mae": 27.453517541596305,
+      "r2": 0.9386629819338471
+    },
+    "baseline": {
+      "method": "training mean",
+      "rmse": 183.07697692556602,
+      "mae": 142.64442409815052,
+      "r2": -0.0007378266143607259,
+      "rmsle": 1.531283135878633
+    }
+  },
+  "full_training_prediction": {
+    "training_rows": 10886,
+    "prediction_rows": 6493,
+    "wall_seconds": 8.0892,
+    "reported_seconds": 7.8233,
+    "selected_model": "hist_gradient_boosting",
+    "model_deadline_reached": false,
+    "emergency_fallback": false,
+    "model_features": 12,
+    "selection_metric": "rmse",
+    "selection_predictions": "raw, before clipping",
+    "target_transform": "none",
+    "negative_predictions_clipped": 118,
+    "raw_minimum_prediction": -15.788321490651567,
+    "raw_maximum_prediction": 920.0807539201384,
+    "minimum_prediction": 0.0,
+    "maximum_prediction": 920.0807539201384,
+    "postprocessing": "clip negative predictions to zero; no integer rounding",
+    "evaluation": "unlabeled prediction run; no score available",
+    "scored": false,
+    "predictions_file": "bike_sharing_predictions.csv",
+    "predictions_sha256": "8ccf8c39d3f4dbc8eead60871cbab0ab031d16b4b7a5ebdaa6cb0222e7cab5b8",
+    "prediction_columns": [
+      "datetime",
+      "count"
+    ],
+    "original_test_order_preserved": true,
+    "submitted_to_kaggle": false
+  }
+}

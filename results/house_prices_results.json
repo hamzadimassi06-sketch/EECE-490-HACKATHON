@@ -1,0 +1,106 @@
+{
+  "dataset": "house_prices",
+  "task": "regression",
+  "source_url": "https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data",
+  "source_files": {
+    "train.csv": {
+      "sha256": "1e18addf81e5e4d347cc17ee6075bbe4a42b7fa26b9e5b063e8f692a5f929d41"
+    },
+    "test.csv": {
+      "sha256": "8fdd3d829d4d986b58f845c9553b225e67dd8383624d90fb6ca1d4bed5798c1e"
+    },
+    "data_description.txt": {
+      "sha256": "356a4670aa688afa8ba44b1365b633fbbac2dae535fe4638532630607d64070d"
+    },
+    "sample_submission.csv": {
+      "sha256": "f19e99699b925aa3085c8d2ae43c62f15fbcd35e4a953b98025f8392c3ffa807"
+    }
+  },
+  "source_training_rows": 1460,
+  "source_test_rows": 1459,
+  "seed": 42,
+  "time_limit_seconds_per_run": 50.0,
+  "preparation": {
+    "excluded_id_columns": [
+      "Id"
+    ],
+    "categorical_codes": [
+      "MSSubClass"
+    ],
+    "preserved_NA_category_columns": [
+      "Alley",
+      "BsmtQual",
+      "BsmtCond",
+      "BsmtExposure",
+      "BsmtFinType1",
+      "BsmtFinType2",
+      "FireplaceQu",
+      "GarageType",
+      "GarageFinish",
+      "GarageQual",
+      "GarageCond",
+      "PoolQC",
+      "Fence",
+      "MiscFeature"
+    ],
+    "NA_category_token": "__NA_category__",
+    "masonry_None_token": "__no_masonry__",
+    "other_NA_values": "missing; handled by the training-only pipeline",
+    "note": "Rowwise code preservation only; no inferred repairs or fitted statistics."
+  },
+  "evaluation_note": "Local holdout scores are not Kaggle leaderboard results.",
+  "log_error_definition": "RMSE(log(actual SalePrice), log(predicted SalePrice)); natural log, no +1",
+  "nonpositive_prediction_policy": "Report count and leave log RMSE null; do not clip silently.",
+  "sample_submission_usage": "Column names and Id alignment only; its SalePrice values are never read.",
+  "holdout": {
+    "training_rows": 1168,
+    "prediction_rows": 292,
+    "wall_seconds": 12.0239,
+    "reported_seconds": 11.8073,
+    "selected_model": "extra_trees",
+    "model_deadline_reached": false,
+    "emergency_fallback": false,
+    "model_features": 79,
+    "selection_metric": "rmse",
+    "target_transform": "none",
+    "rmse": 28891.895926606616,
+    "mae": 18004.620924657534,
+    "r2": 0.8911726010489995,
+    "log_rmse": 0.15927756250700179,
+    "nonpositive_predictions": 0,
+    "evaluation": "random 80/20 outer holdout; separate internal model selection split",
+    "baseline": {
+      "method": "training mean",
+      "rmse": 87619.03450611533,
+      "mae": 62575.926451960964,
+      "r2": -0.0008824918802490256,
+      "log_rmse": 0.4460311707622734,
+      "nonpositive_predictions": 0
+    }
+  },
+  "full_training_prediction": {
+    "training_rows": 1460,
+    "prediction_rows": 1459,
+    "wall_seconds": 15.7501,
+    "reported_seconds": 15.5178,
+    "selected_model": "extra_trees",
+    "model_deadline_reached": false,
+    "emergency_fallback": false,
+    "model_features": 79,
+    "selection_metric": "rmse",
+    "target_transform": "none",
+    "evaluation": "unlabeled prediction run; no score available",
+    "scored": false,
+    "predictions_file": "house_prices_predictions.csv",
+    "predictions_sha256": "c3bbffaa4aba62dca3ff2ec884ee777cdb04d29ab31b9cbfb39d7a3ef0e78fcc",
+    "prediction_columns": [
+      "Id",
+      "SalePrice"
+    ],
+    "original_test_order_preserved": true,
+    "nonpositive_predictions": 0,
+    "minimum_prediction": 49664.61666666666,
+    "maximum_prediction": 567082.4700000002,
+    "submitted_to_kaggle": false
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "task": "classification",
+    "selected_model": "hist_gradient_boosting",
+    "metric": "balanced_accuracy",
+    "value": 0.8385416666666667,
+    "wall_seconds": 7.0473,
+    "prediction_rows": 120,
+    "model_deadline_reached": false
+  },
+  {
+    "task": "regression",
+    "selected_model": "ridge_regression",
+    "metric": "rmse",
+    "value": 10.461183631785286,
+    "wall_seconds": 10.2023,
+    "prediction_rows": 120,
+    "model_deadline_reached": false
+  },
+  {
+    "task": "clustering",
+    "selected_model": "kmeans",
+    "metric": "adjusted_rand_index",
+    "value": 1.0,
+    "wall_seconds": 6.2757,
+    "prediction_rows": 450,
+    "model_deadline_reached": false
+  }
+]

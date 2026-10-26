@@ -1,0 +1,8 @@
+{
+  "task": "regression",
+  "target": "target",
+  "feature_types": {
+    "area": "categorical"
+  },
+  "metric": "rmse"
+}
